@@ -12,9 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('wanted', function (Blueprint $table) {
-            $table->unsignedBigInteger("device_id")->after("id");
-
-            $table->foreign("device_id")->references("id")->on("wanted");
+            $table->unsignedBigInteger('device_id')->after('id');
+            $table->foreign('device_id')->references('id')->on('devices');
         });
     }
 
@@ -27,7 +26,7 @@ return new class extends Migration
 
             $table->dropForeign("wanted_device_id_foreign");
 
-            $table->dropColumn("devide_id");
+            $table->dropColumn("device_id");
         });
     }
 };

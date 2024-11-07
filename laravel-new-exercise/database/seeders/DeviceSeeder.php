@@ -25,9 +25,11 @@ class DeviceSeeder extends Seeder
         ];
 
         foreach ($devicesType as $device) {
-            $newDevice = new Device();
-            $newDevice->device_type = $device;
-            $newDevice->save();
+
+            Device::firstOrCreate(
+                ['device_type' => $device],
+                ['device_type' => $device]
+            );
         }
     }
 }
