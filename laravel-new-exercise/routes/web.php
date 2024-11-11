@@ -29,8 +29,8 @@ Route::get('/home', [App\Http\Controllers\WantedController::class, 'index'])->na
 
 Route::middleware('auth')->prefix('/admin')->name('admin.')->group(function () {
     Route::get('/wanted', [WantedController::class, 'index'])->name('wanted.home');
-    Route::get('/wanted/{id}', [WantedController::class, 'show'])->name('wanted.show');
     Route::get('/wanted/create', [WantedController::class, 'create'])->name('wanted.create');
+    Route::get('/wanted/{id}', [WantedController::class, 'show'])->name('wanted.show');
     Route::post('/wanted', [WantedController::class, 'store'])->name('wanted.store');
 });
 

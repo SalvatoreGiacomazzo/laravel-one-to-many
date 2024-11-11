@@ -31,4 +31,11 @@ class WantedController extends Controller
 
         return view('wanted.show', compact('wanted'));
     }
+
+    public function create()
+    {
+
+
+        return view('wanted.create');
+    }
 }
