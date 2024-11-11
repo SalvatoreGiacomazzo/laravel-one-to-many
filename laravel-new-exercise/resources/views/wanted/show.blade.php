@@ -10,6 +10,7 @@
       <h3 class="card-title"> {{$wanted->name}} {{$wanted->last_name}}</h3>
       <p class="card-text"><strong>Wanted for the crime of:</strong> {{$wanted->felony}}</p>
       <p class="card-text"><strong>In the State of:</strong>{{$wanted->nationality}}</p>
+      <p class="card-text"><strong>Most Used Device:</strong>{{$wanted->device->device_type}}</p>
       <a href="{{route('admin.wanted.home')}}" class="btn btn-dark">Go back</a>
     </div>
   </div>
