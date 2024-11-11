@@ -18,7 +18,7 @@ class WantedController extends Controller
     public function index()
     {
 
-        dd(Device::all()->pluck("id"));
+
         $wantedList = Wanted::paginate(10);
 
         return view('wanted.home', ['wantedList' => $wantedList]);

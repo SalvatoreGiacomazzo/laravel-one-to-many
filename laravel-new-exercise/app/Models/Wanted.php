@@ -9,4 +9,9 @@ class Wanted extends Model
 {
     use HasFactory;
     protected $table = 'wanted';
+
+    public function device()
+    {
+        return $this->belongsTo(Device::class);
+    }
 }
