@@ -19,7 +19,8 @@ class Wanted extends Model
         'date_of_birth',
         'nationality',
         'felony',
-        'device_id'
+        'device_id',
+        'device_type',
     ];
 
     public function device()

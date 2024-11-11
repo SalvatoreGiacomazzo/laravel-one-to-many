@@ -35,7 +35,7 @@ class WantedController extends Controller
     public function create()
     {
 
-
-        return view('wanted.create');
+        $devices = Device::all();
+        return view('wanted.create', compact('devices'));
     }
 }
