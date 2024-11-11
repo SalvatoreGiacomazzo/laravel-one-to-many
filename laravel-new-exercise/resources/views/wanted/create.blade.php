@@ -7,13 +7,13 @@
     @csrf
     <div class="form-group">
         <label for="name">First Name</label>
-        <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" placeholder="Enter first name">
+        <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" >
 
     </div>
 
     <div class="form-group">
         <label for="last_name">Last Name</label>
-        <input type="text" class="form-control" id="last_name" name="last_name" value="{{ old('last_name') }}" placeholder="Enter last name">
+        <input type="text" class="form-control" id="last_name" name="last_name" value="{{ old('last_name') }}">
 
     </div>
 
@@ -25,7 +25,7 @@
 
     <div class="form-group">
         <label for="nationality">Nationality</label>
-        <input type="text" class="form-control" id="nationality" name="nationality" value="{{ old('nationality') }}" placeholder="Enter nationality">
+        <input type="text" class="form-control" id="nationality" name="nationality" value="{{ old('nationality') }}" >
 
     </div>
 
