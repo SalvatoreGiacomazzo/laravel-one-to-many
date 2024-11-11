@@ -1,6 +1,7 @@
 <header class="text-light ">
-   <h1> Wanted Criminal Archive </h1>
+<div class="d-flex align-items-center justify-content-between">
+    <h1> Wanted Criminal Archive </h1>
 
-
-  </div>
+    <button class="btn btn-info">Add New</button>
+   </div>
 </header>

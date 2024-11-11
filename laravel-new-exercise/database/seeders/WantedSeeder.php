@@ -41,25 +41,16 @@ class WantedSeeder extends Seeder
     public function store(Request $request)
     {
 
-        $validatedData = $request->validate([
+        $wantedData = $request->validate([
             'name' => 'required|string|max:15',
             'last_name' => 'required|string|max:25',
             'date_of_birth' => 'required|date',
             'nationality' => 'required|string|max:25',
             'felony' => 'required|string|max:100',
-            'device_type' => 'required|exists:device,id'
+            'device_id' => 'required|integer|min:1|max:7'
         ]);
 
 
-        $wanted = new Wanted();
-        $wanted->name = $validatedData['name'];
-        $wanted->last_name = $validatedData['last_name'];
-        $wanted->date_of_birth = $validatedData['date_of_birth'];
-        $wanted->nationality = $validatedData['nationality'];
-        $wanted->felony = $validatedData['felony'];
-        $wanted->device_id = $validatedData['device_id'];
-
-
-        $wanted->save();
+        Wanted::create($wantedData);
     }
 }
